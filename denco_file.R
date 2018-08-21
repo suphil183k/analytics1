@@ -18,7 +18,7 @@ denco %>% group_by(custname) %>% summarise(n = n()) %>% arrange(desc(n))
  denco %>% group_by(partnum) %>% summarise(n= n()) %>% arrange(desc(n))
  
  # which parts have the highest Profit : Partnum - sum(profit)
- name(sales)
+ names(sales)
  df4a = aggregate(margin ~ partnum, data=sales, FUN=sum)
  aggregate(margin ~ partnum, data=sales, FUN=sum)
  head(df4a[order(df4a$margin, decreasing = T), ])
